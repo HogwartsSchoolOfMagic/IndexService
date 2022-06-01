@@ -1,0 +1,19 @@
+# Basic server properties
+server:
+  port: ${INDEX_PORT:9004}
+
+# Basic spring properties
+spring:
+  # Application
+  application:
+    name: ${INDEX_APPLICATION_NAME:index-service}
+
+# Basic actuator properties
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ${ACTUATOR_ENDPOINTS:*}
+  endpoint:
+    health:
+      show-details: ${ACTUATOR_HEALTH_SHOW_DETAILS:always}
